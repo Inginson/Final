@@ -3,15 +3,26 @@
   width: 100%;
   border: 1px solid red;
   margin: 0 auto;
+  background-color: #F6F8F9;
 }
 
 
+/* აქედან იწყება ჰედერი */
+
 header {
   display: flex;
-  width: 100%;
+  width: 98%;
   border: 1px solid blue;
-  background-color: #f8f8f8;
+  background-color: #F6F8F9;
+  padding: 20px 20px 19px 20px;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  margin-top: -2px;
+}
 
+.navhead {
+  display: flex;
 }
 
 .navhead ul {
@@ -21,11 +32,12 @@ header {
   font-family: 'Helvetica';
   font-weight: bold;
   color: #959798;
-  float: right;
 }
 
 .navhead ul li {
-  transition: all 400ms linear;
+  transition: all 300ms linear;
+  padding-bottom: 10px;
+  animation: list 5s linear forwards;
 }
 
 
@@ -39,9 +51,9 @@ header {
 .navhead ul :nth-child(1) {
   color: black;
   animation: home;
-  animation-duration: 500ms;
-  animation-delay: 5s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
+  transition: all 300ms linear;
 }
 
 .navhead ul :nth-child(1):hover {
@@ -50,7 +62,6 @@ header {
 }
 
 .logo {
-  margin-right: 900px;
   animation-name: logo;
   animation-duration: 5s;
   animation-delay: 0.5s;
@@ -61,12 +72,12 @@ header {
 
 @keyframes logo {
   from {
-    margin-right: 30px;
+    opacity: 0%;
     transform: translate(0%);
   }
 
   to {
-    margin-right: 900px;
+    opacity: 100%;
     transform: translate(100%);
 
   }
@@ -74,12 +85,357 @@ header {
 
 @keyframes home {
   from {
+    color: #959798;
+    ;
+    opacity: 0%;
     box-shadow: none;
     font-size: 1rem;
   }
 
   to {
+    color: black;
+    opacity: 100%;
     box-shadow: 3px 4px 4px;
     font-size: 1.2rem;
-    }
+  }
+}
+
+
+@keyframes list {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+
+
+
+
+/* აქედან იწყება სექცია */
+
+
+.mainsection {
+  margin-top: 67px;
+  width: 100%;
+  display: flex;
+  border: 1px solid brown;
+  background-color: white;
+  height: 610px;
+}
+
+.leftbox {
+  width: 59%;
+  display: flex;
+  border: 1px solid yellow;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+
+
+.textleft {
+  width: 100%;
+  border-top-left-radius: 2px solid blue;
+  font-family: Helvetica;
+  color: white;
+  background-image: url(/images/hills.png);
+  background-position: center;
+}
+
+.textleft h2 {
+  font-size: 1.5rem;
+  font-family: Helvetica;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+.textleft h3 {
+  margin-left: 30px;
+}
+
+.textleft p {
+  margin-left: 30px;
+}
+
+.learnmore {
+  margin-left: 30px;
+}
+
+
+.rightbox {
+  display: flex;
+  width: 48%;
+  border: 2px solid purple;
+  flex-direction: column;
+  position: relative;
+}
+
+.textleft h2::after {
+  content: "";
+  background-color: white;
+  height: 2px;
+  width: 40%;
+  position: absolute;
+  display: block;
+  top: 35%;
+}
+
+.textleft h3 {
+  margin-top: 130px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.textleft p {
+  line-height: 1.5rem;
+  margin-top: 15px;
+}
+
+.textleft button {
+  background-color: #FA6980;
+  margin-top: 20px;
+  font-size: 0.68rem;
+  font-family: Helvetica;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-weight: bold;
+}
+
+
+/* მარჯვენა სექცია */
+
+
+
+.travel {
+  width: 80%;
+  height: 100px;
+  margin-top: 60px;
+  line-height: 30px;
+  margin-left: 30px;
+
+}
+
+.travel h4 {
+  color: #FA6980;
+}
+
+.travel h5 {
+  font-weight: bold;
+}
+
+
+.travel p {
+  color: #A6ADB4
+}
+
+.morenews {
+  margin-left: 30px;
+  margin-top: 80px;
+  display: flex;
+  border: 2px solid pink;
+  width: 80%;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.morenews h2 {
+  font-size: 1.5rem;
+  font-family: Helvetica;
+  font-weight: bold;
+  border: 2px solid seagreen;
+}
+
+.morenews h2::after {
+  content: "";
+  background-color: #EBEDED;
+  height: 2px;
+  width: 80%;
+  position: absolute;
+  display: block;
+  top: 23%;
+}
+
+.technology {
+  margin-left: 30px;
+  border: 1px solid yellow;
+  width: 80%;
+  margin-top: 60px;
+  line-height: 30px;
+}
+
+.technology h4 {
+  color: #FA6980;
+}
+
+.technology h5 {
+  font-weight: bold;
+}
+
+.technology p {
+  color: #A6ADB4
+}
+
+
+.time {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  color: #A6ADB4;
+}
+
+
+
+/* აქედან იწყება ტრენდინგის სექცია */
+
+
+.trendingcaption {
+  font-size: 1.5rem;
+  font-family: 'Helvetica';
+  font-weight: bold;
+  width: 83%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+
+
+
+.trendingsection {
+  display: flex;
+  overflow: scroll;
+  width: 83%;
+  border: 2px solid darkgreen;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.trending {
+  display: flex;
+  border: 1px solid rebeccapurple;
+  background-color: white;
+  object-fit: cover;
+  height: 350px;
+}
+
+.trending figcaption {
+  padding: 30px 20px;
+}
+
+.trending figcaption h3 {
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
+
+.trending figcaption p {
+  color: #A6ADB4;
+}
+
+.trending:hover {
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+
+/* აქედან იწყება მეინ სექცია HAPPENING NOW */
+
+
+.main {
+  width: 83%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid dodgerblue;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.happening {
+  font-size: 1.5rem;
+  font-family: 'Helvetica';
+  font-weight: bold;
+  width: 83%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.bridge {
+  display: flex;
+  width: 67%;
+  border: 2px solid darkred;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  border: 2px solid pink;
+}
+
+.horizontal p {
+  margin-top: 40px;
+}
+
+
+
+/* აქედან იწყება ფუტერი */
+
+
+.footerlogo {
+  align-items: center;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #A6ADB4;
+  font-family: 'Helvetica';
+
+}
+
+
+.navfoot {
+  width: 30%;
+  gap: 8%;
+  align-items: top;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid yellowgreen;
+  line-height: 25px;
+  margin-left: -300px;
+}
+
+.navfoot p {
+  width: 20%;
+  color: #CBD0D3;
+  font-size: 0.8rem;
+}
+
+.socialicons {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  border: 2px solid purple;
+  margin-top: -80px;
+}
+
+.footerlogo {
+  margin-top: -80px;
 }
