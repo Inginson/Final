@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -10,19 +17,27 @@
 /* აქედან იწყება ჰედერი */
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: inherit;
   width: inherit;
   border: 1px solid white;
   background-color: #F6F8F9;
   padding: 20px 20px 19px 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: fixed;
   z-index: 1;
   margin-top: -2px;
 }
 
+
+
 .navhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -43,11 +58,22 @@ label #cancel {
 
 
 .navhead ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 31px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-family: 'Helvetica';
   font-weight: bold;
+}
+
+.navhead ul li {
+  color: #959798;
+}
+
+.news {
   color: #959798;
 }
 
@@ -56,9 +82,13 @@ label #cancel {
   color: black;
 }
 
+
 .navhead ul li {
+  -webkit-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
   transition: all 300ms linear;
   padding-bottom: 10px;
+  -webkit-animation: list 300ms linear forwards;
   animation: list 300ms linear forwards;
 }
 
@@ -76,25 +106,61 @@ label #cancel {
 
 
 .logo {
+  -webkit-animation-name: logo;
   animation-name: logo;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
   transition: all 400ms ease-out;
 
 }
 
-@keyframes logo {
+@-webkit-keyframes logo {
   from {
     opacity: 0%;
+    -webkit-transform: translate(0%);
     transform: translate(0%);
   }
 
   to {
     opacity: 100%;
+    -webkit-transform: translate(100%);
     transform: translate(100%);
 
   }
+}
+
+@keyframes logo {
+  from {
+    opacity: 0%;
+    -webkit-transform: translate(0%);
+    transform: translate(0%);
+  }
+
+  to {
+    opacity: 100%;
+    -webkit-transform: translate(100%);
+    transform: translate(100%);
+
+  }
+}
+
+
+
+@-webkit-keyframes list {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+
 }
 
 
@@ -120,6 +186,8 @@ label #cancel {
 .mainsection {
   margin-top: 67px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: white;
   height: 610px;
@@ -127,8 +195,11 @@ label #cancel {
 
 .leftbox {
   width: 59%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -166,8 +237,13 @@ label #cancel {
 
 
 .rightbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 48%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
 }
@@ -235,9 +311,13 @@ label #cancel {
 .morenews {
   margin-left: 30px;
   margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
   height: 30px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -279,7 +359,11 @@ label #cancel {
 
 .time {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #A6ADB4;
 }
@@ -302,17 +386,24 @@ label #cancel {
 
 
 .trendingsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   width: 83%;
   margin: 0 auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 60px;
 }
 
 .trending {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: white;
+  -o-object-fit: cover;
   object-fit: cover;
   height: 350px;
 }
@@ -331,7 +422,10 @@ label #cancel {
 }
 
 .trending:hover {
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   overflow: hidden;
 }
@@ -342,8 +436,13 @@ label #cancel {
 
 .main {
   width: 83%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto;
   margin-top: 40px;
@@ -359,12 +458,19 @@ label #cancel {
 }
 
 .bridge {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 67%;
   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 30px;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
   position: relative;
 }
@@ -422,7 +528,12 @@ label #cancel {
 
 
 .horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 60px;
 }
@@ -443,14 +554,24 @@ footer {
   padding: 5% 10% 6% 9%;
   background-color: #A6ADB4;
   font-family: 'Helvetica';
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .footer_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20%;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   line-height: 25px;
 }
@@ -464,7 +585,10 @@ footer {
 
 
 .socialicons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 200px;
 }
@@ -484,8 +608,14 @@ footer {
 
   .rightbox {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
   }
@@ -522,12 +652,17 @@ footer {
 
 
   .trendingsection {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
 
   .trending:hover {
+    -webkit-filter: none;
     filter: none;
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
     overflow: visible;
   }
@@ -542,9 +677,16 @@ footer {
 
   .main {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     margin: 0 auto;
     margin-top: 40px;
@@ -555,6 +697,9 @@ footer {
   }
 
   .horizontal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     overflow: hidden;
     gap: 20px;
@@ -592,21 +737,27 @@ footer {
     position: fixed;
     top: -100%;
     line-height: 30px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     background-color: black;
     text-align: center;
     font-size: 0.7rem;
   }
-  
+
 
   .navhead ul li {
     margin-top: 20px;
   }
 
-  .navhead ul :nth-child(1) {
+  #home {
     color: white;
+    -webkit-animation: home;
     animation: home;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
     transition: all 300ms linear;
   }
 
@@ -615,10 +766,11 @@ footer {
     scale: 1;
   }
 
-  @keyframes home {
+  @-webkit-keyframes home {
     from {
       color: #959798;
       opacity: 100%;
+      -webkit-box-shadow: none;
       box-shadow: none;
       font-size: 0.5rem;
     }
@@ -626,6 +778,25 @@ footer {
     to {
       color: white;
       opacity: 100%;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-size: 1rem;
+    }
+  }
+
+  @keyframes home {
+    from {
+      color: #959798;
+      opacity: 100%;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-size: 0.5rem;
+    }
+
+    to {
+      color: white;
+      opacity: 100%;
+      -webkit-box-shadow: none;
       box-shadow: none;
       font-size: 1rem;
     }
@@ -659,6 +830,8 @@ footer {
     overflow: hidden;
     width: 75%;
     margin: 0 auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 60px;
   }
@@ -708,6 +881,9 @@ footer {
   }
 
   .horizontal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     overflow: visible;
     margin: 0 auto;
@@ -727,6 +903,8 @@ footer {
 
   footer {
     height: 100px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -751,7 +929,17 @@ footer {
 /* აქედან იწყება WORLDNEWS.HTML */
 
 
+#worldli {
+  color: black;
+}
+
+#homeli {
+  color: #959798;
+}
+
 .section3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
   margin: 0 auto;
@@ -822,6 +1010,8 @@ label {
 
 .section4 {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   margin-top: 38px;
@@ -829,6 +1019,8 @@ label {
 }
 
 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 33%;
   font-size: 0.87rem;
@@ -854,13 +1046,17 @@ label {
 
 
 .worldmain {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
   margin: 0 auto;
   color: #A6ADB4;
   line-height: 30px;
   overflow: hidden;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -887,6 +1083,7 @@ label {
   }
 
   .section4 {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -920,7 +1117,13 @@ label {
 @media only screen and (max-width:480px) {
 
 
-  
+  #worldli {
+    color: white;
+  }
+
+  #homeli {
+    color: #959798;
+  }
 
   .section3 img {
     width: 375px;
