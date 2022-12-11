@@ -17,11 +17,19 @@
 <body>
   <div class="container">
     <header>
-      <img class="logo" src="images/LOGO1.svg" alt="logo">
+      <a href="index.html"><img class="logo" src="images/LOGO1.svg" alt="logo"></a>
       <nav class="navhead">
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i class="fa-solid fa-xmark" id="cancel"></i>
+          <i class="fa-solid fa-bars" id="btn"></i>
+
+        </label>
         <ul>
-          <li>HOME</li>
-          <li>WORLD NEWS</li>
+          <li id="home">HOME</li>
+          <a href="Worldnews.html">
+            <li>WORLD NEWS</li>
+          </a>
           <li>PHOTOS</li>
           <li>CONTACT</li>
         </ul>
@@ -113,8 +121,21 @@
     <main class="main">
       <div class="bridge">
         <img src="images/bridge.png" alt="red bridge">
-
-        <img src="images/Woods.png" alt="green Wood">
+        <div class="bridgetoptext">
+          <p>CITY</p>
+        </div>
+        <div class="bridgetext">
+          <h3>Large article title</h3>
+          <p>Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo</p>
+        </div>
+        <img class="woods" src="images/Woods.png" alt="green Wood">
+        <div class="woodstoptext">
+          <p>TRAVEL</p>
+        </div>
+        <div class="woodstext">
+          <h3>Large article title</h3>
+          <p>Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo</p>
+        </div>
       </div>
 
       <div class="horizontal">
@@ -141,27 +162,36 @@
 
 
     <footer>
-      <img class="footerlogo" src="images/LOGO2.svg" alt="logo">
-      <nav class="navfoot">
-        <p>Home</p>
-        <p>About</p>
-        <p>Testimonials</p>
-        <p>Discovery</p>
-        <p>Help</p>
-        <p>Advertise</p>
-        <p>Photos</p>
-        <p>Terms</p>
-        <p>Integration</p>
-        <p>Contact</p>
-        <p>Guidlines</p>
-        <p>Careers</p>
-      </nav>
+
+      <div class="footer_left">
+        <img class="footerlogo" src="images/LOGO2.svg" alt="logo">
+        <div class="footer_left_box">
+          <p class="navfoot_text">Home</p>
+          <p class="navfoot_text">About</p>
+          <p class="navfoot_text">Testimonials</p>
+          <p class="navfoot_text">Discovery</p>
+        </div>
+        <div class="footer_left_box">
+          <p class="navfoot_text">Help</p>
+          <p class="navfoot_text">Advertise</p>
+          <p class="navfoot_text">Photos</p>
+          <p class="navfoot_text">Terms</p>
+        </div>
+        <div class="footer_left_box">
+          <p class="navfoot_text">Integration</p>
+          <p class="navfoot_text">Contact</p>
+          <p class="navfoot_text">Guidlines</p>
+          <p class="navfoot_text">Careers</p>
+        </div>
+      </div>
+
+
 
       <div class="socialicons">
-        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.svg" alt="instagram icon"></a>
-        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="facebook icon"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.svg" alt="twitter icon"></a>
-        <a href="https://www.digitaledu.ge" target="_blank"><img src="images/web.svg" alt="web icon"></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.digitaledu.ge" target="_blank"><i class="fa-brands fa-internet-explorer"></i></a>
       </div>
     </footer>
 
